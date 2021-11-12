@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>Exercise 1</title>
+	</head>
+    <body>
+        <form name="passwords">
+            <input type="password" name="p1"></input>
+            <br>
+            <input type="password" name="p2"></input>
+            <br>
+            <input type="button" onclick="validateForm()" value="validate"></input>
+        </form>
+    </body>
+</html>
+<script>    
+    function validateForm()
+    {
+        let input = document.forms["passwords"]["p1"].value;
+        let repeat = document.forms["passwords"]["p2"].value;
+        if(input != repeat)
+        {
+            alert("The passwords do not match!");
+        } else if(input.length < 8)
+        {
+            alert("The password is less than 8 characters!");
+        } else 
+        {
+            alert("The password is acceptable!");
+        }
+    }
+</script>
